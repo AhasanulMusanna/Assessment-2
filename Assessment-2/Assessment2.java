@@ -13,7 +13,7 @@ public class Assessment2
 {
     public static void main (String[] args) {
         try {
-            File myFile = new File("prog5001_students_grade_2022");
+            File myFile = new File("prog5001_students_grade_2022.csv");
             Scanner myScanner = new Scanner(myFile);
             while (myScanner.hasNextLine()) {
                 String line = myScanner.nextLine();
