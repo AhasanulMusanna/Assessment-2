@@ -22,8 +22,13 @@ public class Assessment2
             Scanner myScanner = new Scanner(myFile);
             while (myScanner.hasNextLine()) {
                 String line = myScanner.nextLine();
+                if (line.contains("Last Name") || line.contains("ID") || line.contains("Unit")) {
+                    continue;
+                }
+                
                 System.out.println(line);
             }
+            
             myScanner.close();
         }
         catch (FileNotFoundException e) {
