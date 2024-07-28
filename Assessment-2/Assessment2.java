@@ -53,7 +53,7 @@ public class Assessment2
                     double TotalMarks = A1 + A2 + A3;
                     
                 
-                    System.out.println("Name: " + FirstName + " " + LastName + " " + "Student ID: " + StudentID + " Total Marks: " + TotalMarks);
+                    System.out.println("Name: " + FirstName + " " + LastName + " with " + "Student ID: " + StudentID + " Got Total Marks of: " + TotalMarks + ", Assessment 1: " + A1 + ", Assessment 2: " + A2 + ", Assessment 3: " + A3 );
                 }
                 
                 
