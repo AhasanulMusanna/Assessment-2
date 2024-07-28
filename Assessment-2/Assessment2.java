@@ -22,8 +22,29 @@ public class Assessment2
             Scanner myScanner = new Scanner(myFile);
             while (myScanner.hasNextLine()) {
                 String line = myScanner.nextLine();
-                System.out.println(line);
+                if (line.contains("Last Name") || line.contains("ID") || line.contains("Unit")) {
+                    continue;
+                }
+                
+                String[] columns = line.split(",");
+                if (columns.length == 6) {
+                    String LastName = columns[0];
+                    String FirstName = columns[1];
+                    String StudentID = columns[2];
+                    
+                    double A1 = Double.parseDouble(columns[3]);
+                    double A2 = Double.parseDouble(columns[4]);
+                    double A3 = Double.parseDouble(columns[5]);
+                    
+                    double TotalMarks = A1 + A2 + A3;
+                    
+                
+                    System.out.println("Name: " + FirstName + " " + LastName + " " + "Student ID: " + StudentID + " Total Marks: " + TotalMarks);
+                }
+                
+                
             }
+            
             myScanner.close();
         }
         catch (FileNotFoundException e) {
