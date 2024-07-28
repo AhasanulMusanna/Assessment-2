@@ -12,8 +12,13 @@ import java.util.Scanner;
 public class Assessment2
 {
     public static void main (String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Enter Your File Name");
+        String FileName = scanner.nextLine();
+        
         try {
-            File myFile = new File("prog5001_students_grade_2022.csv");
+            File myFile = new File(FileName);
             Scanner myScanner = new Scanner(myFile);
             while (myScanner.hasNextLine()) {
                 String line = myScanner.nextLine();
