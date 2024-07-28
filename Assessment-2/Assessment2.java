@@ -32,8 +32,22 @@ public class Assessment2
                     String FirstName = columns[1];
                     String StudentID = columns[2];
                     
+                    if (columns[3].isEmpty()) {
+                        continue;
+                    }
+                        
                     double A1 = Double.parseDouble(columns[3]);
+                    
+                    if (columns[4].isEmpty()) {
+                        continue;
+                    }
+                    
                     double A2 = Double.parseDouble(columns[4]);
+                    
+                    if (columns[5].isEmpty()) {
+                        continue;
+                    }
+                    
                     double A3 = Double.parseDouble(columns[5]);
                     
                     double TotalMarks = A1 + A2 + A3;
@@ -49,6 +63,10 @@ public class Assessment2
         }
         catch (FileNotFoundException e) {
             System.out.println("An error has occurred.");
+            e.printStackTrace();
+        }
+        catch (NumberFormatException e) {
+            System.out.println("No record found");
             e.printStackTrace();
         }
     }
