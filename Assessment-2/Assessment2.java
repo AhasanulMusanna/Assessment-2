@@ -53,7 +53,7 @@ public class Assessment2 {
             e.printStackTrace();
         }
         catch (NumberFormatException e) {
-            System.out.println("Error in File Format");
+            System.out.println("Error in Number Format");
             e.printStackTrace();
         }
         scanner.close();
